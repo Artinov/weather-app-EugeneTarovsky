@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Weather App</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-	<h1 id="cityName"></h1>
-	<h3 id="time"></h3>
+    <input id="city" class="form-control" placeholder="Cityname">
+        <!--<option>Vinnitsa</option>
+        <option>Kiev</option>
+        <option>Odesa</option>
+        <option>Lviv</option>
+        <option>Moscow</option>-->
+    </input>
+    <button class="btn btn-info btn-block">
+    	Get
+    </button>
 
-	<h4>Humidity: <span id="humidity"></span></h4>
-	<h4>Predictability: <span id="predictability"></span>%</h4>
-	<h4>Temperature: <span id="the_temp"></span></h4>
-	<h4>Weather: <span id="weather_state_name"></span></h4>
-	<h4>Wind speed: <span id="wind_speed"></span></h4>
+   <div class="row">
+        <div class="col-md-12">
+            <ol class="breadcrumb" id="breadcrumb-list">
+              <li id="breadcrumb-country">Country</li>
+              <li id="breadcrumb-region">Region</li>
+            </ol>
+        </div>
+    </div>
+  <div class="row">
+        <div class="col-md-4 col-xs-4">
+            <img src="" id="weather-icon"/>
+        </div>
+        <div class="col-md-4 col-xs-4">
+            <h1 id="cityName"></h1>
+        </div>
+        <div class="col-md-4 col-xs-4">
+            <h3 id="time"></h3>
+        </div>
+    </div>
 
+    <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Humidity</td>
+                    <td><span id="humidity"></span></td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td><span id="the_temp"></span></td>
+                </tr>
+                <tr>
+                    <td>Weather</td>
+                    <td><span id="weather_state_name"></span></td>
+                </tr>
+                <tr>
+                    <td>Wind speed</td>
+                    <td><span id="wind_speed"></span></td>
+                </tr>
+            </tbody>
+        </table>
 
-	<script type="text/javascript" src="./index.js"></script>
+ </table>
+
+    <script type="text/javascript" src="./scripts/index.js"></script>
 
 </body>
 </html>
